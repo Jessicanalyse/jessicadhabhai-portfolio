@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=boska@400,500,600&display=swap');
 
 :root {
-  --ink: #1a1a1a;
-  --muted: #5b5b5b;
-  --pink: #ba4896;
-  --pink-deep: #8c3269;
-  --blush: #f6e8f1;
-  --blush-deep: #eed3e5;
-  --gold: #c69a56;
-  --paper: #fffbf9;
+  --navy: #023e8a;
+  --blue: #0096c7;
+  --sky: #caf0f8;
+  --sky-deep: #a9e2f0;
+  --ink: #142433;
+  --muted: #4e5c68;
+  --paper: #fbfeff;
   --white: #ffffff;
-  --line: #e9dbe5;
+  --line: #d9ecf2;
 }
 
 * {
@@ -25,9 +24,9 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Boska", Georgia, serif;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -44,7 +43,7 @@ img {
 
 .site-header {
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 251, 249, 0.92);
+  background: rgba(251, 254, 255, 0.92);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -62,11 +61,10 @@ img {
 }
 
 .brand {
-  color: var(--ink);
-  font-family: "Fraunces", Georgia, serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.4rem;
+  color: var(--navy);
+  font-family: "Clash Display", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.35rem;
   letter-spacing: -0.01em;
 }
 
@@ -79,7 +77,8 @@ img {
 .nav-links a {
   position: relative;
   color: var(--muted);
-  font-size: 0.93rem;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: 0.92rem;
   font-weight: 500;
   padding: 6px 1px;
 }
@@ -91,14 +90,14 @@ img {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: var(--pink);
+  background: var(--blue);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s ease;
 }
 
 .nav-links a:hover {
-  color: var(--ink);
+  color: var(--navy);
 }
 
 .nav-links a:hover::after {
@@ -106,7 +105,7 @@ img {
 }
 
 .nav-links a.active {
-  color: var(--pink-deep);
+  color: var(--navy);
   font-weight: 600;
 }
 
@@ -147,28 +146,27 @@ main {
 h1, h2, h3 {
   margin: 0;
   line-height: 1.15;
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Clash Display", Arial, sans-serif;
 }
 
 h1 {
-  color: var(--pink);
+  color: var(--navy);
   font-weight: 600;
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
   letter-spacing: -0.02em;
 }
 
 h2 {
-  color: var(--pink);
+  color: var(--navy);
   font-weight: 600;
   font-size: clamp(1.7rem, 3.2vw, 2.3rem);
   letter-spacing: -0.015em;
 }
 
 h3 {
-  color: var(--ink);
+  color: var(--navy);
   font-weight: 600;
   font-size: 1.15rem;
-  font-family: "Inter", Arial, sans-serif;
 }
 
 .subtitle {
@@ -191,52 +189,29 @@ h3 {
   align-items: center;
 }
 
-.hero-copy .kicker {
-  color: var(--gold);
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 14px;
-}
-
 .photo-frame {
-  position: relative;
-  width: min(320px, 100%);
+  width: min(300px, 100%);
   margin: 0 auto;
-}
-
-.photo-frame::before {
-  content: "";
-  position: absolute;
-  inset: 18px -18px -18px 18px;
-  background: var(--blush);
-  border-radius: 22px;
-  z-index: 0;
-}
-
-.photo-frame .frame-inner {
-  position: relative;
-  z-index: 1;
-  background: var(--white);
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  box-shadow: 0 24px 46px rgba(140, 50, 105, 0.14);
 }
 
 .photo-frame img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
-  border-radius: 13px;
+  border-radius: 50%;
+  box-shadow: 0 20px 44px rgba(2, 62, 138, 0.16);
 }
 
 .about-card {
   margin-top: 56px;
   padding-left: 26px;
-  border-left: 3px solid var(--pink);
-  max-width: 640px;
+  border-left: 3px solid var(--blue);
+  max-width: 660px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .about-card p {
@@ -266,15 +241,7 @@ h3 {
   grid-template-columns: 200px 1fr;
   gap: 24px;
   align-items: start;
-  padding: 22px 0;
-}
-
-.skill-row + .skill-row {
-  border-top: 1px solid var(--line);
-}
-
-.skill-row h3 {
-  color: var(--pink-deep);
+  padding: 4px 0;
 }
 
 .tags {
@@ -284,106 +251,81 @@ h3 {
 }
 
 .tag {
-  background: var(--blush);
-  color: var(--pink-deep);
+  background: var(--sky);
+  color: var(--navy);
+  font-family: "Clash Display", Arial, sans-serif;
   border-radius: 999px;
-  padding: 7px 14px;
-  font-size: 0.88rem;
-  font-weight: 600;
+  padding: 7px 16px;
+  font-size: 0.87rem;
+  font-weight: 500;
   transition: background 0.2s ease;
 }
 
 .tag:hover {
-  background: var(--blush-deep);
+  background: var(--sky-deep);
 }
 
 /* ---------- Projects ---------- */
 
 .project-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 20px;
 }
 
 .project-card {
   display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 24px;
-  padding: 30px 4px;
-  border-top: 1px solid var(--line);
+  grid-template-columns: 64px 1fr;
+  gap: 22px;
+  padding: 30px 32px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-card:last-child {
-  border-bottom: 1px solid var(--line);
+.project-card:hover {
+  border-color: var(--sky-deep);
+  box-shadow: 0 18px 36px rgba(2, 62, 138, 0.08);
+}
+
+.project-number {
+  font-family: "Clash Display", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--sky-deep);
 }
 
 .project-card p {
   margin: 8px 0 0;
   color: var(--muted);
-  max-width: 520px;
+  max-width: 620px;
 }
 
-.project-link {
-  color: var(--pink-deep);
-  font-weight: 700;
-  font-size: 0.92rem;
-  white-space: nowrap;
-  border: 1.5px solid var(--pink);
-  border-radius: 999px;
-  padding: 10px 20px;
-  transition: background 0.2s ease, color 0.2s ease;
-}
+/* ---------- Achievements ---------- */
 
-.project-link:hover {
-  background: var(--pink);
-  color: var(--white);
-}
-
-/* ---------- Achievements timeline ---------- */
-
-.timeline {
-  position: relative;
+.achievements-list {
   display: grid;
-  gap: 8px;
-  padding-left: 28px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 8px;
-  bottom: 8px;
-  width: 1.5px;
-  background: var(--line);
+  gap: 18px;
 }
 
 .achievement-card {
-  position: relative;
-  padding: 22px 0 22px 30px;
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  gap: 20px;
+  padding: 26px 4px;
+  border-top: 1px solid var(--line);
 }
 
-.achievement-card::before {
-  content: "";
-  position: absolute;
-  left: -28px;
-  top: 30px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--pink);
-  box-shadow: 0 0 0 4px var(--paper);
+.achievements-list .achievement-card:first-child {
+  border-top: none;
 }
 
-.meta {
-  display: inline-block;
-  color: var(--pink-deep);
-  background: var(--blush);
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 999px;
-  margin-bottom: 10px;
+.achievement-card .marker {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--blue);
+  margin-top: 8px;
 }
 
 .achievement-card h3 {
@@ -415,7 +357,7 @@ h3 {
 
   .photo-frame {
     order: -1;
-    width: min(240px, 70%);
+    width: min(220px, 60%);
   }
 
   .skill-row {
@@ -425,6 +367,11 @@ h3 {
 
   .skills-panel {
     padding: 30px 26px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
 
@@ -460,12 +407,7 @@ h3 {
   }
 
   .project-card {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-
-  .project-link {
-    justify-self: start;
+    padding: 24px 20px;
   }
 }
 
@@ -478,6 +420,6 @@ h3 {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--pink-deep);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
 }
